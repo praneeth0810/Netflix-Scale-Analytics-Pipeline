@@ -21,8 +21,7 @@ This pipeline ingests raw CSVs (MovieLens format), loads them into Snowflake usi
 
 ## 🗂️ Architecture
 
-![Architecture Diagram](Netflix-Snowflake-dbt Analytics/architecture.jpeg)
-
+![Architecture Workflow](<Netflix-Snowflake-dbt Analytics/architecture.jpeg>)
 ### Layers
 
 | Layer            | Description                                                           |
@@ -35,7 +34,7 @@ This pipeline ingests raw CSVs (MovieLens format), loads them into Snowflake usi
 
 ## 🔄 Data Lineage
 
-![dbt Lineage Graph](Netflix-Snowflake-dbt Analytics/data_lineage.png)
+![Data Lineage Graph](<Netflix-Snowflake-dbt Analytics/data_lineage.png>)
 
 ### Sample Flow:
 - `netflix.r_movies` → `src_movies` → `dim_movies` → `dim_movies_with_tags` → `mart_movie_releases`
