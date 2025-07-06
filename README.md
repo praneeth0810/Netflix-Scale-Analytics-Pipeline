@@ -9,7 +9,7 @@ A full-stack data analytics project simulating a real-world Netflix-style workfl
 - **Amazon S3** – raw data ingestion
 - **Snowflake** – ELT, staging, warehousing
 - **dbt** – SQL-based transformations, modeling, testing, orchestration
-- **Looker Studio / Power BI / Tableau** – live, filterable BI dashboards
+- **Power BI** – live, filterable BI dashboards
 
 ---
 
@@ -21,7 +21,7 @@ This pipeline ingests raw CSVs (MovieLens format), loads them into Snowflake usi
 
 ## 🗂️ Architecture
 
-![Architecture Diagram](./architecture.jpeg)
+![Architecture Diagram](Netflix-Snowflake-dbt Analytics/architecture.jpeg)
 
 ### Layers
 
@@ -35,7 +35,7 @@ This pipeline ingests raw CSVs (MovieLens format), loads them into Snowflake usi
 
 ## 🔄 Data Lineage
 
-![dbt Lineage Graph](./data_lineage.png)
+![dbt Lineage Graph](Netflix-Snowflake-dbt Analytics/data_lineage.png)
 
 ### Sample Flow:
 - `netflix.r_movies` → `src_movies` → `dim_movies` → `dim_movies_with_tags` → `mart_movie_releases`
@@ -51,7 +51,7 @@ This pipeline ingests raw CSVs (MovieLens format), loads them into Snowflake usi
 ## 🔐 Access Control
 
 - Configured **Snowflake RBAC** with a scoped `TRANSFORM` role  
-- Looker Studio connected using secure credentials  
+- Power BI Studio connected using secure credentials  
 - BI users only see serving-layer models
 
 ## 📊 Dashboards (Power BI Studio)
